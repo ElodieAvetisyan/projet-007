@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+.header__logo {
+    width: 210px;
+    height: 68px;
+}
+
+.header__link {
+    margin-left: 35px;
+    color: $color-primary;
+    text-decoration: none;
+
+    &--underlined {
+        text-decoration: underline;
+    }
+}
+
+.linkActive {
+    text-decoration: underline;
+}
