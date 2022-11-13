@@ -19,7 +19,7 @@ function Home() {
             ) : (
                 <div className="home__cards">
                     {datas.map((lodging) => (
-                        <Link to={`/Hebergement/${lodging.id}`} key={lodging.id}>
+                        <Link to={`/lodging/${lodging.id}`} key={lodging.id}>
                             <Card
                                 title={lodging.title}
                                 picture={lodging.pictures[0]}

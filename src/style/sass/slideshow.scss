@@ -1,0 +1,49 @@
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    &__image {
+        width: 100%;
+        height: 415px;
+        overflow: hidden;
+        border-radius: 25px;
+        padding-top: 40px;
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+    }
+
+    &__arrowsLeft {
+        position: absolute;
+        left: 5px;
+    }
+
+    &__arrowsRight {
+        position: absolute;
+        right: 5px;
+    }
+
+    &__bulletpoint {
+        position: absolute;
+        left: 49%;
+        font-size: 18px;
+        bottom: 5px;
+        color: white;
+    }
+}
+
+.arrow {
+    top: 40%;
+    font-size: 100px;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
