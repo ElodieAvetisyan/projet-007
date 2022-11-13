@@ -4,9 +4,11 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Header from './components/Header'
 import Error from './components/Error'
+import Lodging from './pages/Lodging';
+import Footer from './components/Footer';
 import "./style/sass/main.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import PageHebergement from './pages/PageHebergement';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,8 +18,9 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/aboutus" element={<AboutUs />} />
-      <Route path="/Hebergement/:id" element={<PageHebergement />} />
+      <Route path="/Hebergement/:id" element={<Lodging />} />
       <Route path="*" element={<Error />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 );

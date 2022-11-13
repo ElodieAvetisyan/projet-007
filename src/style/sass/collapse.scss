@@ -1,0 +1,33 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-primary;
+        color: $color-textWithBackground;
+        padding-left: 10px;
+        border-radius: 5px;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            margin-right: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__description {
+        color: $color-primary;
+        background-color: $color-background;
+        padding: 25px 10px 10px 10px;
+        border-radius: 5px;
+    }
+}

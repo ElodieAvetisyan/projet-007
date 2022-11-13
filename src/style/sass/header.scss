@@ -2,20 +2,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    width: 1240px;
+    height: 68px;
+    margin-top: 40px;
+    margin-left: 100px;
     font-size: 24px;
 }
 
 .header__logo {
-    width: 210px;
+    width: 210.32px;
     height: 68px;
 }
 
 .header__link {
-    margin-left: 35px;
+    margin-left: 70px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: right;
     color: $color-primary;
     text-decoration: none;
 
