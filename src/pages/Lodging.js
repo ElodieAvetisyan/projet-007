@@ -24,7 +24,7 @@ function getHTMLLinesWithArray(array) {
 function Lodging() {
     const { lodgingId } = useParams()
     const lodging = getLodgingWithId(lodgingDatas, lodgingId)
-    // const lodgingEquipment = getHTMLLinesWithArray(lodging.equipments)
+    const lodgingEquipment = getHTMLLinesWithArray(lodging.equipments)
 
     return (
         <div className="lodging">
@@ -51,7 +51,7 @@ function Lodging() {
             </div>
             <div className="lodging__collapses">
                 <div className="lodging__collapses__collapse"><Collapse label="Description" description={lodging.description} /></div>
-                <div className="lodging__collapses__collapse"><Collapse label="Equipements" description={lodging.equipments} /></div>
+                <div className="lodging__collapses__collapse"><Collapse label="Equipements" description={lodgingEquipment} /></div>
             </div>
         </div>
     )
