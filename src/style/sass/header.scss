@@ -7,11 +7,27 @@ header {
     margin-top: 40px;
     margin-left: 120px;
     font-size: 24px;
+
+    @media (max-width: 768px) {
+        margin-top: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+
 }
 
 .header__logo {
     width: 210.32px;
     height: 68px;
+
+    @media (max-width: 768px) {
+
+        width: 105px;
+        height: 34px;
+
+    }
+
+
 }
 
 .header__link {
@@ -26,6 +42,14 @@ header {
     &--underlined {
         text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding: 0;
+
+
+    }
+
 }
 
 .linkActive {
