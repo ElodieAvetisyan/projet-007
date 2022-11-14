@@ -13,6 +13,12 @@
         font-weight: 700;
         text-align: center;
         margin-top: 100px;
+
+        @media (max-width: 768px) {
+            font-size: 96px;
+            margin-bottom: 0;
+            margin-top: 200px;
+        }
     }
 
     &__text {
@@ -21,6 +27,13 @@
         margin-top: 100px;
         margin-bottom: 20px;
         padding-bottom: 100px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            text-align: center;
+            width: 90%;
+            margin-top: -100px;
+        }
     }
 
     &__backHome {
@@ -28,5 +41,12 @@
         font-size: 18px;
         margin-bottom: 30px;
         color: $color-primary;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            text-align: center;
+            width: 90%;
+            margin-bottom: 0px;
+        }
     }
 }
