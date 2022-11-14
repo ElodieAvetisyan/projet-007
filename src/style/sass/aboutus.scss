@@ -1,10 +1,22 @@
 .aboutus {
-    height: 47px;
     font-size: 24px;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+        font-size: 13px;
+
+    }
 }
 
 .aboutus__collapses {
-    width: 1023px;
+    width: 75%;
     margin: auto;
+
+
+
+    @media (max-width: 768px) {
+        width: 85%;
+        margin-top: 80px;
+    }
+
 }
