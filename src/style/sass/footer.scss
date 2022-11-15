@@ -14,4 +14,8 @@ footer {
     font-size: 24px;
     padding-top: 20px;
     padding-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 12px
+    }
 }

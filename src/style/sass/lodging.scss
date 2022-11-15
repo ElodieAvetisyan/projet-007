@@ -9,6 +9,10 @@
         color: $color-primary;
         padding-bottom: 20px;
 
+        @media (max-width: 768px) {
+            margin-top: -110px;
+        }
+
         &__lodging {
             display: flex;
             flex-direction: column;
@@ -17,17 +21,27 @@
                 font-weight: 500;
                 font-size: 36px;
                 padding-bottom: 15px;
+
+                @media (max-width: 768px) {
+                    width: 335px;
+                    font-size: 18px;
+                }
             }
 
             &__location {
                 font-weight: 500;
                 font-size: 18px;
                 padding-bottom: 5px;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
             }
 
             &__tags {
                 display: flex;
                 padding: 0px;
+
 
                 &__tag {
                     background-color: $color-primary;
@@ -37,6 +51,22 @@
                     margin-right: 15px;
                     border-radius: 10px;
                     font-size: 14px;
+
+                    @media (max-width:768px) {
+                        font-size: 12px;
+                        text-align: center;
+                        width: 90%;
+
+                    }
+
+                }
+
+                @media (max-width: 768px) {
+                    height: 20px;
+                    width: 200px;
+                    left: 0px;
+                    border-radius: 5px;
+
                 }
             }
         }
@@ -47,22 +77,45 @@
             flex-direction: column;
             justify-content: space-between;
 
+            @media (max-width: 768px) {
+                flex-direction: row-reverse;
+                margin-top: 130px;
+                margin-left: -350px;
+            }
+
+
             &__host {
                 display: flex;
                 align-items: center;
 
+
                 &__name {
                     font-size: 18px;
                     padding-right: 10px;
+
+                    @media (max-width: 768px) {
+                        width: 50%;
+                        font-size: 12px;
+                        margin-left: 35px;
+                        text-align: right;
+                    }
                 }
 
                 &__picture {
                     border-radius: 50%;
                     width: 64px;
 
+                    @media (max-width: 768px) {
+                        width: 32px;
+                    }
+
                     & img {
                         border-radius: 50%;
                         width: 64px;
+
+                        @media (max-width: 768px) {
+                            width: 32px;
+                        }
                     }
                 }
             }
@@ -73,13 +126,27 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
         &__collapse {
             width: 48%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                font-size: 12px;
+            }
 
             & p {
                 margin: 0;
                 padding: 5px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
+
         }
     }
 }
@@ -91,10 +158,28 @@
     &__coloredStar {
         font-size: 22px;
 
+        @media (max-width: 768px) {
+            font-size: 15px;
+            margin-right: 0px;
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+
     }
 
     &__greyStar {
         color: #E3E3E3;
         font-size: 22px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 24%;
     }
 }
