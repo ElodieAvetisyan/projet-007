@@ -34,9 +34,9 @@ function AboutUs() {
                 picture={banner_aboutus}
             />
             <div className="aboutus__collapses">
-                {aboutUsDatas.map((section) => (
+                {aboutUsDatas.map((section, index) => (
                     <Collapse
-                        key={section.id}
+                        key={index}
                         label={section.label}
                         description={section.description}
                     />

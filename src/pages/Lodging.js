@@ -34,8 +34,8 @@ function Lodging() {
                     <div className="lodging__informations__lodging__title">{lodging.title}</div>
                     <div className="lodging__informations__lodging__location">{lodging.location}</div>
                     <ul className="lodging__informations__lodging__tags">
-                        {lodging.tags.map((tag) => (
-                            <li key={tag.index} className="lodging__informations__lodging__tags__tag">{tag}</li>
+                        {lodging.tags.map((tag, index) => (
+                            <li key={index} className="lodging__informations__lodging__tags__tag">{tag}</li>
                         ))}
                     </ul>
                 </div>

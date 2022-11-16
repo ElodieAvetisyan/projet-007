@@ -12,12 +12,15 @@ function Rating({ rate }) {
     for (let i = 0; i < numberOfGreyStars; i++) {
         starsArray.push(<div className="rating__greyStar"><FaStar /></div>)
     }
-
     return (
         <div className="rating">
-            {starsArray}
+            {starsArray.map((rate, index) => (
+                <span key={index}> {rate} </span>
+            )
+            )}
         </div>
-    )
+
+    );
 }
 
 
