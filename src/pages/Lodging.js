@@ -1,33 +1,33 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Slideshow from "./../components/Slideshow"
 import Collapse from "./../components/Collapse"
 import Rating from "./../components/Rating"
+import { useEffect, useState } from "react"
 const lodgingDatas = require("./../logements.json")
+import useFetch from "./../utils/hooks/useFetch";
 
-function getLodgingWithId(lodgingDatas, lodgingId) {
-    for (let lodging of lodgingDatas) {
-        if (lodging.id === lodgingId) {
-            console.log(lodging.id, lodgingId, lodging)
-            return lodging
-        }
-    }
-}
 
-function getHTMLLinesWithArray(array) {
-    const newArray = []
-    for (let element of array) {
-        newArray.push(<p>{element}</p>)
-    }
-    return newArray
-}
 
 function Lodging() {
     const { lodgingId } = useParams()
-    const lodging = getLodgingWithId(lodgingDatas, lodgingId)
-    const lodgingEquipment = getHTMLLinesWithArray(lodging.equipments)
+    const navigate = useNavigate();
+    const [lodging, setlodging] = useState(null)
+    const { datas, isLoading } = useFetch("./../logements.json")
+
+    useEffect(() => {
+        const data = datas.filter(element => element.id === lodgingId)
+
+        if (data.length < 1 && !isLoading) {
+            navigate("*")
+        } else {
+            setlodging(data[0])
+        }
+
+    }, [isLoading]);
+
 
     return (
-        <div className="lodging">
+        <> {lodging && (<div className="lodging">
             <Slideshow photosArray={lodging.pictures} />
             <div className="lodging__informations">
                 <div className="lodging__informations__lodging">
@@ -51,9 +51,13 @@ function Lodging() {
             </div>
             <div className="lodging__collapses">
                 <div className="lodging__collapses__collapse"><Collapse label="Description" description={lodging.description} /></div>
-                <div className="lodging__collapses__collapse"><Collapse label="Equipements" description={lodgingEquipment} /></div>
+                <div className="lodging__collapses__collapse"><Collapse label="Equipements" description={lodging.equipments.map((element, index) => (
+                    <p key={index}>{element}</p>
+                ))} /></div>
             </div>
-        </div>
+        </div>)}
+        </>
+
     )
 }
 

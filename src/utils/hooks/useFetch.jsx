@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 function useFetch(url) {
     const [datas, setDatas] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         async function fetchDatas() {
             setIsLoading(true)

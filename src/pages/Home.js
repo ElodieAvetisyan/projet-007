@@ -7,7 +7,7 @@ import banner from "./../assets/banner.png"
 function Home() {
     const { datas, isLoading } = useFetch("./logements.json")
 
-    console.log(datas)
+
     return (
         <div className="home">
             <Banner
