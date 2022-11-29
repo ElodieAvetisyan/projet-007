@@ -3,7 +3,6 @@ import Slideshow from "./../components/Slideshow"
 import Collapse from "./../components/Collapse"
 import Rating from "./../components/Rating"
 import { useEffect, useState } from "react"
-const lodgingDatas = require("./../logements.json")
 import useFetch from "./../utils/hooks/useFetch";
 
 
